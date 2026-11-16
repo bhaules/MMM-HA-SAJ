@@ -1,0 +1,13 @@
+{
+  "name": "mmm-ha-saj",
+  "version": "1.0.0",
+  "description": "MagicMirror module: SAJ solar/battery power flow from Home Assistant, with the Solcast forecast and a daily comparison against the SAJ cloud",
+  "main": "node_helper.js",
+  "scripts": {
+    "test": "node test/test_driver.js"
+  },
+  "keywords": ["magicmirror", "saj", "solar", "home-assistant", "solcast"],
+  "author": "bhaules",
+  "license": "MIT",
+  "dependencies": {}
+}

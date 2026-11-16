@@ -1,0 +1,62 @@
+.MMM-HA-SAJ .hasaj {
+	width: 560px;
+	color: #fff;
+	font-family: Roboto, sans-serif;
+	font-size: 20px;
+	line-height: 1.2;
+	text-align: left;
+}
+
+/* Power flow: PV over battery on the left, home in the middle, grid on the right */
+.MMM-HA-SAJ .hasaj-flow {
+	display: grid;
+	grid-template-columns: 1fr 0.5fr 1fr 0.5fr 1fr;
+	grid-template-rows: auto auto;
+	align-items: center;
+	justify-items: center;
+	row-gap: 0;
+}
+.MMM-HA-SAJ .hasaj-pv { grid-column: 1; grid-row: 1; text-align: center; }
+.MMM-HA-SAJ .hasaj-arrow-pv { grid-column: 2; grid-row: 1; }
+.MMM-HA-SAJ .hasaj-battery { grid-column: 1; grid-row: 2; text-align: center; }
+.MMM-HA-SAJ .hasaj-arrow-bat { grid-column: 2; grid-row: 2; }
+.MMM-HA-SAJ .hasaj-home { grid-column: 3; grid-row: 1 / span 2; text-align: center; }
+.MMM-HA-SAJ .hasaj-arrow-grid { grid-column: 4; grid-row: 1 / span 2; }
+.MMM-HA-SAJ .hasaj-grid { grid-column: 5; grid-row: 1 / span 2; text-align: center; }
+
+.MMM-HA-SAJ .hasaj-val { color: #fff; white-space: nowrap; }
+.MMM-HA-SAJ .hasaj-dim { color: #aaa; }
+.MMM-HA-SAJ .hasaj-icon img { width: 46px; height: 46px; display: block; margin: 2px auto; }
+.MMM-HA-SAJ .hasaj-icon svg { display: block; margin: 0 auto; }
+
+/* Solar today / tomorrow line above the chart */
+.MMM-HA-SAJ .hasaj-head {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4px;
+	font-size: 18px;
+	color: #aaa;
+}
+.MMM-HA-SAJ .hasaj-head b { color: #fff; font-weight: bold; }
+
+/* Chart */
+.MMM-HA-SAJ .hasaj-chart { margin-top: 2px; line-height: 0; }
+.MMM-HA-SAJ .hasaj-chart svg { display: block; }
+.MMM-HA-SAJ .hasaj-band { fill: rgba(255, 255, 255, 0.13); stroke: none; }
+.MMM-HA-SAJ .hasaj-forecast { fill: none; stroke: #fff; stroke-width: 1.5; stroke-dasharray: 5 4; opacity: 0.85; }
+.MMM-HA-SAJ .hasaj-actual-area { fill: rgba(255, 190, 40, 0.45); stroke: none; }
+.MMM-HA-SAJ .hasaj-actual { fill: none; stroke: #ffbe28; stroke-width: 2.5; stroke-linejoin: round; }
+.MMM-HA-SAJ .hasaj-now { stroke: #fff; stroke-width: 1; opacity: 0.5; }
+.MMM-HA-SAJ .hasaj-gridline { stroke: #fff; stroke-width: 1; opacity: 0.12; }
+.MMM-HA-SAJ .hasaj-baseline { stroke: #888; stroke-width: 1; }
+.MMM-HA-SAJ .hasaj-axis { fill: #aaa; font-size: 13px; font-family: Roboto, sans-serif; }
+
+/* Today's totals */
+.MMM-HA-SAJ .hasaj-table { width: 100%; margin-top: 2px; border-collapse: collapse; font-size: 18px; }
+.MMM-HA-SAJ .hasaj-table td { padding: 0 4px; }
+.MMM-HA-SAJ .hasaj-l { color: #aaa; text-align: left; white-space: nowrap; }
+.MMM-HA-SAJ .hasaj-r { color: #fff; text-align: right; font-weight: bold; white-space: nowrap; padding-right: 12px !important; }
+
+.MMM-HA-SAJ .hasaj-foot { margin-top: 2px; font-size: 16px; color: #aaa; }
+.MMM-HA-SAJ .hasaj-foot b { color: #fff; font-weight: normal; }
+.MMM-HA-SAJ .hasaj-err { color: #ff6666; }

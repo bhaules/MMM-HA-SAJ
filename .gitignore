@@ -1,0 +1,3 @@
+node_modules/
+.saj-cloud-cache.json
+*.log
