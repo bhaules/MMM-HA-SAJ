@@ -117,8 +117,8 @@ Module.register("MMM-HA-SAJ", {
 		const cap = parseFloat(this.config.batteryCapacity);
 		if (cap > 0 && v.batterySoc !== null) socLine += ` <span class="hasaj-dim">${this.fmt(v.batterySoc / 100 * cap, 1)} kWh</span>`;
 		g.appendChild(this.el("div", "hasaj-battery",
-			`<div class="hasaj-val">${socLine}</div><div class="hasaj-icon">${this.batteryIcon(v.batterySoc)}</div>`
-			+ `<div class="hasaj-val">${this.kW(v.batteryPower)}</div>`));
+			`<div class="hasaj-val">${this.kW(v.batteryPower)}</div><div class="hasaj-icon">${this.batteryIcon(v.batterySoc)}</div>`
+			+ `<div class="hasaj-val">${socLine}</div>`));
 
 		let batArrow = "arrow_none";
 		if (v.batteryPower > idle) batArrow = "arrow_right_red"; // discharging: battery -> home
